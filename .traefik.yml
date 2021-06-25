@@ -1,6 +1,19 @@
-displayName: Transform JWT from Authorization header to query parameter
+# The name of your plugin as displayed in the Traefik Pilot web UI.
+displayName: Replace Status Code
+
+# For now, `middleware` is the only type available.
 type: middleware
+
+# The import path of your plugin.
 import: github.com/patrickmedina/traefik-plugin-jwt-header-to-query
-summary: Modify the request to have the JWT in query parameters instead of from Authorization header
+
+# A brief description of what your plugin is doing.
+summary: This plugin is used to translate an http status code to another one.
+
+# Configuration data for your plugin.
+# This is mandatory,
+# and Traefik Pilot will try to execute the plugin with the data you provide as part of its startup validity tests.
 testData:
-  paramName: jwt
+  inputCode: 429
+  outputCode: 200
+  removeBody: false
