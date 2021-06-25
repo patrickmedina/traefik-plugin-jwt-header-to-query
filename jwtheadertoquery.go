@@ -1,4 +1,4 @@
-package traefik_plugin_jwt_header_to_query
+package traefik-plugin-jwt-header-to-query
 
 import (
 	"context"
