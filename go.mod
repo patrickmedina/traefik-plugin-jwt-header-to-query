@@ -1,3 +1,3 @@
 module github.com/patrickmedina/traefik-plugin-jwt-header-to-query
 
-go 1.15
+go 1.13
